@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ hr {
+    border: 0.5px solid hsl(30, 18%, 87%);
+    margin: 20px 0px;
+ }
+
+ .nutrition hr {
+    margin: 8px 0px;
+ }

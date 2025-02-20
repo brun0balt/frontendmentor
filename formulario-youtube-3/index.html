@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="content">
+
+        <div class="criar-conta">
+            <header class="header">
+                <h2>Nova Conta</h2>
+            </header>
+
+            <div id="form">
+                <div class="dados">
+                    <label for="username" id="username">Usuário:</label>
+                    <input type="name" placeholder="Digite seu nome de usuário..." id="username" class="senha">
+                    <span class="msgerro">Campo obrigatório*</span>
+                </div>
+
+                <div class="dados">
+                    <label for="email" id="email">E-mail:</label>
+                    <input type="email" placeholder="Digite seu e-mail..." id="email" class="senha">
+                    <span class="msgerro">Campo obrigatório*</span>
+                </div>
+
+                <div class="dados">
+                    <label for="password" id="password">Senha:</label>
+                    <input type="text" placeholder="Digite sua senha..." id="senha" class="senha">
+                    <span class="msgerro">Campo obrgatório*</span>
+                </div>
+
+                <div class="dados">
+                    <label for="password-confirmation" id="password-confirmation">Confirmação de Senha:</label>
+                    <input type="text" placeholder="Digite sua senha novamente..." id="password-confirmation"
+                        class="senha">
+                    <span class="msgerro">Campo obrigatório*</span>
+                </div>
+
+                <button id="btn" type="submit">Criar Conta</button>
+            </div>
+        </div>
+
+        <div class="login-conta">
+
+            <header class="header">
+                <h2>Fazer Login</h2>
+            </header>
+
+            <div id="login">
+                <div class="dados">
+                    <label for="username" id="username">Login:</label>
+                    <input type="name" placeholder="Digite seu nome de usuário..." id="username" class="senha">
+
+                    <label for="username" id="username">Senha:</label>
+                    <input type="name" placeholder="Digite seu nome de usuário..." id="username" class="senha">
+                </div>
+
+                <button id="btn" type="submit">Entrar</button>
+            </div>
+        </div>
+
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --Lime-color: 215, 218, 47;
+    --Red: hsl(4, 69%, 50%);
+    --White: hsl(0, 0%, 100%);
+    --Slate-100: hsl(202, 86%, 94%);
+    --Slate-300: hsl(203, 41%, 72%);
+    --Slate-500: hsl(200, 26%, 54%);
+    --Slate-700: hsl(200, 24%, 40%);
+    --Slate-900: hsl(202, 55%, 16%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Slate-100);
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    background-color: var(--White);
+    border-radius: 20px;
+}
+
+.container .form {
+    padding: 2rem;
+}
+
+.container .form p {
+    margin-bottom: .5rem;
+    font-size: .9rem;
+    color: var(--Slate-900);
+}
+
+.container .form>*:not(:first-child, :last-child) {
+    margin-top: 1.5rem;
+}
+
+.container .form .Mortgage-Calculator {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.container .form .Mortgage-Calculator h1 {
+    color: var(--Slate-900);
+}
+
+.container .form .Mortgage-Calculator .button {
+    border: none;
+    font: inherit;
+    background-color: none;
+    all: unset;
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--Slate-700);
+}
+
+.container .form label>div {    
+    display: flex;
+    border-radius: .3rem;
+    border: 1px solid var(--Slate-500);
+    width: 100%;
+    overflow: hidden;
+    font-weight: 500;
+    color: var(--Slate-700);
+}
+
+.container .form label div div {
+    background-color: var(--Slate-100);
+    width: max-content;
+    padding: 0 .8rem;
+    display: flex;
+    align-items: center;
+    border-radius: unset;
+}
+
+.container .form label:focus-within div div {
+    background-color: rgb(var(--Lime-color));
+}
+
+.container .form label:focus-within div {
+    border-color: rgb(var(--Lime-color));
+    color: var(--Slate-900);
+}
+
+.container .form input:not([type="radio"]) {
+    padding: .8rem 1rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.container .form .Mortgage-Term-Interest-Rate {
+    display: flex;
+    gap: 1rem;
+}
+
+.container .form .Mortgage-Type {
+    margin-bottom: 2rem;
+}
+
+.container .form .Mortgage-Type label {
+    display: flex;
+    align-items: center;
+    border-radius: .3rem;
+    border: 1px solid var(--Slate-500);
+    padding: 0.8rem 1rem;
+    font-weight: 500;
+    margin: .5rem 0;
+}
+
+.container .form .Mortgage-Type label:focus-within {
+    background-color: rgb(var(--Lime-color), 0.2);
+    border-color: rgb(var(--Lime-color));
+}
+
+.container .form .Mortgage-Type input {
+    border: 1px solid var(--Slate-900);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: relative;
+}
+
+.container .form .Mortgage-Type input:checked {
+    border: 1px solid rgb(var(--Lime-color));
+}
+
+.container .form .Mortgage-Type input:checked:before {
+    background-color: rgb(var(--Lime-color));
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.container .form .Mortgage-Type label span {
+    padding-left: .5rem;
+}
+
+.container .form button {
+    display: flex;
+    align-items: center;
+    background-color: rgb(var(--Lime-color));
+    border: none;
+    padding: .6rem 1.5rem;
+    border-radius: 2rem;
+    color: var(--Slate-900);
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    cursor: pointer;
+}
+
+.container .form button img {
+    padding-right: .5rem;
+}
+
+.container .results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--Slate-900);
+    border-radius: 0 0 0 4rem;
+    max-width: 30.4rem;
+}
+
+.container .results img {
+    padding-top: 4rem;
+}
+
+.container .results .info h1 {
+    color: var(--White);
+    margin-top: 2rem;
+}
+
+.container .results .info p {
+    margin-top: 1rem;
+    color: var(--Slate-100);
+    font-size: .8rem;
+    line-height: 1.2rem;
+}
+
+.container .your-results {
+    padding: 2rem;
+    background-color: var(--Slate-900);
+    border-radius: 0 0 0 4rem;
+    max-width: 30.4rem;
+    display: none;
+}
+
+.container .your-results .info h1 {
+    color: var(--White);
+}
+
+.container .your-results .info p {
+    color: var(--Slate-300);
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.container .your-results .numbers {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(201, 57%, 12%);
+    margin-top: 2rem;
+    border-top: 3px solid rgb(var(--Lime-color));
+    border-radius: .3rem;
+    padding: 1.5rem;
+}
+
+.container .your-results .numbers span {
+    color: var(--Slate-300);
+    font-size: 14px;
+}
+
+.container .your-results .numbers span:first-child {
+    border-bottom: 1px solid #504f4f95;
+}
+
+/* JS */
+.container .form .error-message {
+    font-size: .7rem;
+    display: none;
+    color: var(--Red);
+}
+
+.container .results.off {
+    display: none;
+}
+
+.container .your-results.on {
+    display: block;
+}
+
+.container div.error label>div {
+    border-color: var(--Red);
+}
+
+.container div.error label>div div{
+    background-color: var(--Red);
+    color: #fff ;
+}
+
+.container div.error span.error-message {
+    display: block;
+}

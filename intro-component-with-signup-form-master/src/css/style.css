@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --Red: #ff7a7a;
+    --Green: #38cc8c;
+    --Blue: #6055a5;
+    --Dark-Blue: #3e3c49 ;
+    --Grayish-Blue: #b9b6d3;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../intro-component-with-signup-form-master/images/bg-intro-desktop.png');
+    background-size: cover;
+    background-color: var(--Red);
+}
+
+.about {
+    max-width: 490px;
+    width: 100%;
+    color: #fff;
+}
+
+.about h1 {
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.about p {
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form .sale {
+   height: 70px;
+   background-image: linear-gradient(120deg, #243bad, #b656ff 100%);
+   width: 100%;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   gap: 5px;
+   box-shadow: 0 8px 0 rgba(0, 0 , 0, 0.2);
+   margin-bottom: 30px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.form .sale:hover {
+    scale: 103%;
+}
+
+.form .dados {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    gap: 20px;
+    width: 500px;
+}
+
+.form .dados .input {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #949494;
+    height: 50px;
+    padding: 10px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.form .dados input {
+    border: none;
+    flex: 1;
+    outline: none;
+    font-weight: 600;
+}
+
+.form .dados button {
+    height: 50px;
+    background-color: var(--Green);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    border-bottom: 3px solid rgb(22, 160, 22);
+    width: 100%;
+}
+
+.form .dados p {
+    display: flex;
+    gap: 5px;
+    font-size: 11px;
+    color: var(--Grayish-Blue);
+}
+
+.form .dados strong {
+    display: flex;
+    gap: 5px;
+    color: var(--Red);
+    cursor: pointer;
+}
+
+.form .dados .error {
+    display: flex;
+    align-self: end;
+    font-size: 12px;
+    margin-top: -20px;
+    opacity: 0;
+    color: var(--Red);
+}
+
+.form .dados .attention {
+    opacity: 0;
+}
+
+.form .dados .attention.visible, .form .dados .error.visible {
+    opacity: 1;
+}
+
+.form .dados .input.visible {
+    border-color: var(--Red);
+}
+
+.form .dados .input.green {
+    border-color: var(--Green);
+}

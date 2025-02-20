@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    color: var(--Dark-grayish-blue);
+}
+
+:root{
+    --Dark-cyan: #3c8067;
+    --dark-cyan-deep: #1A4031;
+    --Cream: #f2ebe3;
+    --Very-dark-blue: #1c232b;
+    --Dark-grayish-blue: #6c7289;
+    --White: #ffffff ;
+}
+
+.fraunces{
+    font-family: "Fraunces", serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+}
+.container{
+    width: 600px;
+    height: 450px;
+    background-color: var(--White);
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container .image{
+    width: 50%;
+}
+.container .image img{
+    width: 100%;
+    display: block;
+}
+.container .card{
+    width: 50%;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container .card h6{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+.container .card h1{
+    color: var(--Very-dark-blue);
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 30px;
+}
+.container .card p{
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.container .card h2{
+    font-size: 32px;
+    line-height: 32px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.container .card h2 span{
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+.container .card a{
+    display: flex;
+    line-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--White);
+    background-color: var(--Dark-cyan);
+    border-radius: 8px;
+    margin-top: 26px;
+    transition-duration: 200ms;
+}
+.container .card a:hover{
+    background-color: var(--dark-cyan-deep);
+}
+.container .card a img{
+    display: block;
+}

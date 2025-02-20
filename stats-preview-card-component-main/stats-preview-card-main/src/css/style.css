@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    background-color: var(--very-dark-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container .box {
+    background-color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.container .box .info {
+    padding: 0 115px 0 70px;
+    max-width: 565px;
+}
+
+.container .box .info h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.container .box .info .highlight{
+    color: var(--violet);
+}
+
+.container .box .info p {
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 75px;
+    line-height: 150%;
+}
+
+.container .box .info ul {
+    display: flex;
+}
+
+.container .box .info ul li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 75px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.container .box .info ul li span {
+    margin-top: 5px;
+    font-size: 14px;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+.container .box .image {
+    background-color: var(--violet);
+    max-height: 446px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+
+
+.container .box img {
+    mix-blend-mode: multiply;
+    opacity: .8;
+    height: 450px;
+}
