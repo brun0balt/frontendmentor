@@ -42,7 +42,7 @@ body {
   width: 100%;
   top: 0;
   margin-bottom: 20px;
-  padding: 50px 100px;
+  padding: 50px;
 
   & .sign-in {
     display: flex;
@@ -54,6 +54,18 @@ body {
     i {
       color: var(--White);
     }
+
+    .fa-house {
+      margin-left: 50px;
+      background: linear-gradient(
+        90deg,
+        rgba(101, 226, 217, 1) 0%,
+        rgba(51, 158, 204, 1) 35%
+      );
+      color: var(--White);
+      padding: 10px;
+      border-radius: 50px;
+    }
   }
 }
 
@@ -64,15 +76,17 @@ body {
     rgba(23, 32, 47, 1) 75%
   );
   width: 700px;
+  height: 600px;
   position: relative;
   display: flex;
-  padding: 70px;
+  align-items: center;
+  padding: 50px;
   border-radius: 200px 50px 200px 50px;
 
   & img {
-    width: 400px;
+    width: 550px;
     position: absolute;
-    right: -120px;
+    right: -260px;
     top: 30px;
     border-left: 1px solid var(--White);
   }
@@ -120,7 +134,7 @@ body {
 }
 
 input:focus + .error-msg {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .error-msg {

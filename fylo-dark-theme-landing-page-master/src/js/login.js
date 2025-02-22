@@ -26,6 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
           isValid = false;
         }
       }
+
+      if (registerInputs[index].value.trim().length < 7) {
+        errorMessages[index].style.visibility = "visible";
+        isValid = false;
+      }
     });
 
     if (isValid) {
@@ -37,5 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
 const siginupButton = document.querySelector(".signup-btn");
 siginupButton.addEventListener("click", (event) => {
   event.preventDefault();
-  window.location.href = "index.html";
+  window.location.href = "register.html";
+});
+
+const houseButton = document.querySelector(".fa-house");
+houseButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  window.location.href = "index.html"
 });

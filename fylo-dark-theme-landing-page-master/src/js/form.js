@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      if (registerInputs[2].value.trim() !== registerInputs[3].value.trim() ) {
+      if (registerInputs[2].value.trim() !== registerInputs[3].value.trim()) {
         errorMessages[2].style.visibility = "visible";
         errorMessages[3].style.visibility = "visible";
         errorMessages[2].textContent = "passwords must be the same";
@@ -35,25 +35,22 @@ document.addEventListener("DOMContentLoaded", () => {
         isValid = false;
       }
 
-      if (registerInputs[2].value.trim() === "" && registerInputs[3].value.trim() === ""){
+      if (
+        registerInputs[2].value.trim().length < 7 ||
+        registerInputs[3].value.trim().length < 7
+      ) {
         errorMessages[2].style.visibility = "visible";
         errorMessages[3].style.visibility = "visible";
-        errorMessages[2].textContent = "field required";
-        errorMessages[3].textContent = "field required";
-        isValid = false;
-      }
-  
-      if (registerInputs[2].value.trim().length < 7 || registerInputs[3].value.trim().length < 7) {
-        errorMessages[2].style.visibility = "visible";
-        errorMessages[3].style.visibility = "visible";
-        errorMessages[2].textContent = "passwords must be at least 7 characters";
-        errorMessages[3].textContent = "passwords must be at least 7 characters";
+        errorMessages[2].textContent =
+          "passwords must be at least 7 characters";
+        errorMessages[3].textContent =
+          "passwords must be at least 7 characters";
         isValid = false;
       }
     });
 
     if (isValid) {
-      window.location.href = "index.html";
+      window.location.href = "login.html";
     }
   });
 });
@@ -61,5 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
 const siginButton = document.querySelector(".sigin-btn");
 siginButton.addEventListener("click", (event) => {
   event.preventDefault();
-  window.location.href = "index.html";
+  window.location.href = "login.html";
+});
+
+const houseButton = document.querySelector(".fa-house");
+houseButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  window.location.href = "index.html"
 });
